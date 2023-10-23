@@ -5,7 +5,8 @@
 
 Create an interactive calculator application using Python that incorporates a variety of functions and features. The calculator will be able to perform arithmetic operations, handle complex calculations, and provide additional functionalities.
 
-**Project Requirements:**
+****Project Requirements:****
+
 **1.Functions with Inputs:**
 Implement a function for each arithmetic operation (addition, subtraction, multiplication, division) that takes two input numbers.
 Allow the user to choose an operation and input two numbers.
