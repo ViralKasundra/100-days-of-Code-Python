@@ -1,4 +1,4 @@
-# Python Sets Application (Complex)
+# Python Sets Operations Application
 
 # Initialize an empty set
 my_set = set()
