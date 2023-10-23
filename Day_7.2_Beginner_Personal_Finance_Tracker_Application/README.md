@@ -4,6 +4,7 @@
 The Personal Finance Tracker is a Python application designed to help users manage their financial transactions, budgets, and overall financial health. It allows users to record transactions, view their financial history, calculate their total balance, set budget limits for different expense categories, and check if their spending exceeds budget limits.
 
 **Features**
+
 **1. Add Transaction**
 Description: Users can enter details of a financial transaction, including the date, description, category, and amount.
 Input: Date (YYYY-MM-DD), Description, Category, Amount.
