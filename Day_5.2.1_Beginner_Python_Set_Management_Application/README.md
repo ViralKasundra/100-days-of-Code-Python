@@ -1,4 +1,4 @@
-******Project Title: Sets Managmnet Application ******
+******Project Title: Sets Managmnet Application******
 
 **Project Description:**
 The Python Sets Application is a complex Python program that demonstrates the functionality of sets in Python. It allows users to interactively manage sets, perform various set operations, and explore the features of sets. The application covers creating sets, adding and removing elements, handling immutable sets, set comprehensions, set intersection, set update, set copy, set clear, set conversion, and checking set equality and subsets.
