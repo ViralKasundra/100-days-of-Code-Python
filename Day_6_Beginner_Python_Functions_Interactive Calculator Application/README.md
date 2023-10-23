@@ -1,4 +1,3 @@
-
 # Interactive Calculator Application
 
 **Project Description:**
