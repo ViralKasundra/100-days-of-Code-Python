@@ -18,3 +18,7 @@ If the player enters an invalid choice, they are prompted to enter a correct cho
 If the player chooses to "swim" across the lake, they get attacked by an angry trout, leading to a Game Over.
 
 If the player chooses "right" at the initial crossroad, they are informed that they chose a door that doesn't exist, resulting in a Game Over.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/understanding-control-flow-in-python.html
