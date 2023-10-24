@@ -51,10 +51,14 @@ Input: Filename from which to load data.
 Output: Confirmation of data loaded.
 
 **Assumptions and Constraints**
-Users are expected to provide valid data in the specified format (e.g., valid date format, numeric amounts).
-Budget limits can be set or checked for specific categories. If a category is not defined, it is considered as having no budget limit.
+1.Users are expected to provide valid data in the specified format (e.g., valid date format, numeric amounts).
+2.Budget limits can be set or checked for specific categories. If a category is not defined, it is considered as having no budget limit.
 
 **Error Handling**
-The application handles errors such as invalid amounts and non-existent files when saving or loading data.
-The application handles cases where users attempt to view transactions or calculate total balance with no recorded transactions.
-The application informs the user when attempting to calculate category spending for non-existent or zero-spending categories.
+1.The application handles errors such as invalid amounts and non-existent files when saving or loading data.
+2.The application handles cases where users attempt to view transactions or calculate total balance with no recorded transactions.
+3.The application informs the user when attempting to calculate category spending for non-existent or zero-spending categories.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/demystifying-python-exceptions-from.html
