@@ -3,6 +3,7 @@
 The Caesar Cipher program is a Python-based tool for encrypting and decrypting messages using the Caesar cipher technique. The program allows users to input a message, a shift amount, and choose whether to encrypt or decrypt the message. The Caesar cipher technique involves shifting each letter in the message by a fixed number of positions down the alphabet.
 
 **Features**
+
 **1. Input Text**
 Description: Users can input a text message that they want to encrypt or decrypt.
 Input: The message can include letters (both uppercase and lowercase), numbers, and special characters.
