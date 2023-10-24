@@ -1,4 +1,4 @@
-# Python Exceptions Application
+# Python Exceptions Tracker Application
 
 import traceback
 import sys
