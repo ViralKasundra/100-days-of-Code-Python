@@ -35,3 +35,7 @@ Implement loops to iterate through tuples and perform operations on each element
 
 **Joining Tuples:**
 Demonstrate how to concatenate and combine multiple tuples into a single tuple
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/mastering-python-tuples-beyond-basics.html
