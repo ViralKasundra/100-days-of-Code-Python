@@ -1,4 +1,4 @@
-****Python Exceptions Application Requirement Document****
+****Python Exceptions Application****
 
 **1. Introduction**
 The Python Exceptions Application is designed to demonstrate various aspects of exception handling in Python. It provides a menu-driven interface for users to explore common exceptions, practice advanced exception handling, define and raise custom exceptions, view the exception history, and save the exception history to a file.
