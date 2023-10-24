@@ -23,3 +23,7 @@ Users can view statistics related to a specific grade, including the number of s
 Courses and Student Records:
 
 The application uses nested tuples to manage both courses and student records. It displays a list of courses and student information together.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/mastering-python-tuples-beyond-basics.html
