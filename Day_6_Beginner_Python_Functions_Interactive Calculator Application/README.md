@@ -44,3 +44,7 @@ Implement error handling to catch and report any exceptions that may occur durin
 Additional Mathematical Functions:
 
 Include additional mathematical functions such as exponentiation, logarithms, and trigonometric calculations.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/mastering-python-functions.html
