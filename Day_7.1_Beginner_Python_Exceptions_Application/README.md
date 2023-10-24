@@ -40,3 +40,7 @@ Explore and understand Python exception handling.
 7.save_exception_history_to_file(): Saves the exception history to a user-specified file.
 8.global_exception_handler(): Handles unhandled exceptions and records them.
 9.record_exception(): Records exceptions in the exception history.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/demystifying-python-exceptions-from.html
