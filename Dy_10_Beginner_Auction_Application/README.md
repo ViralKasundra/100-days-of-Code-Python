@@ -1,51 +1,52 @@
-Overview
-The Hangman Game is a Python-based word guessing game in which players attempt to guess a hidden word by suggesting letters one at a time. The game provides ASCII art representation of a hangman figure as players make incorrect guesses. The game continues until the player either guesses the word or runs out of attempts.
+****Overview****
 
-Features
-1. Select Random Word
-The game randomly selects a word from a predefined list.
+The Multi-Bidder Auction Program is a Python-based tool for conducting auctions with multiple bidders. The program allows users to input their names and bid amounts. The program finds and displays the highest bidder and the corresponding bid. It also starts with a stylized welcome message using pyfiglet to enhance user experience.
+
+**Features**
+
+**1. Welcome Message**
+
+Description: The program displays a stylized welcome message at the beginning using pyfiglet.
+
 Input: None.
-Output: A word is chosen for the game.
 
-2. Display Hangman Art
-The game displays ASCII art representing the hangman figure.
-Input: The number of incorrect attempts.
-Output: The appropriate hangman figure is shown.
+Output: An ASCII art welcome message is presented.
 
-3. Guess a Letter
-The player can guess a letter in an attempt to guess the hidden word.
-Input: A single letter.
-Output: The game provides feedback on the correctness of the guess and updates the word display.
+**2. Input Bidders**
+Description: Users can input their names and bid amounts to participate in the auction.
 
-4. Word Display
-The game displays the word with underscores for unrevealed letters and reveals correct guesses.
+Input: User-provided names and bid amounts.
+
+Output: The program records the bidders and their bids.
+
+**3. Find Highest Bidder**
+
+Description: The program identifies the highest bidder and their corresponding bid.
+
+Input: Bidders and their bids.
+
+Output: The highest bidder and their bid are determined.
+
+**4. Interactive User Experience**
+Description: The program provides an interactive experience, allowing users to continue entering bids for multiple bidders.
+
+Input: User choice to continue or exit after each bid.
+
+Output: The program processes multiple bids based on user input.
+
+**5. Modular Structure**
+
+Description: The program is organized into separate functions, including a display_welcome_message function and a find_highest_bidder function.
+
 Input: None.
-Output: The current state of the word, including guessed letters.
 
-5. Guessed Letters
-The game maintains a list of guessed letters.
-Input: None.
-Output: The list of guessed letters is displayed.
+Output: Modularization enhances code structure and maintainability.
 
-6. Win Condition
-The game checks if the player has guessed the word correctly.
-Input: None.
-Output: A message is displayed if the player wins the game.
+**Assumptions and Constraints**
+1.Users are expected to provide their names and bid amounts.
 
-7. Lose Condition
-The game checks if the player has exhausted their allowed attempts.
-Input: None.
-Output: A message is displayed if the player loses the game.
+2.Bid amounts can be floating-point numbers.
 
-8. Validate Input
-The game validates user input to ensure it is a single letter.
-Input: User input.
-Output: Feedback is provided for invalid input.
+3.The program determines the highest bidder based on the highest bid amount.
 
-Assumptions and Constraints
-The game uses a predefined list of words.
-The hangman figure consists of seven stages.
-Players have a limited number of attempts (6 in this case).
-The game accepts single-letter guesses from the player.
-Only one letter can be guessed at a time.
-The game does not consider letter case (case-insensitive).
+4.Users can continue entering bids until they choose to exit.
