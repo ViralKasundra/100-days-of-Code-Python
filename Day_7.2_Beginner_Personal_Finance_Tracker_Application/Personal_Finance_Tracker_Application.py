@@ -161,9 +161,9 @@ def main():
             category_spending = finance_tracker.calculate_category_spending(category)
 
             if category_spending is not None:
-                print(f"Category '{category}' does not exist or has no spending.")
-            else:
                 print(f"Spending in '{category}': {category_spending}")
+            else:
+                print(f"Category '{category}' does not exist or has no spending.")
 
         elif choice == '5':
             category = input("Enter the category to set a budget: ")
