@@ -28,4 +28,8 @@ Users can borrow books from the catalog. The application tracks the due date for
 Users can return borrowed books, and the application updates the available copies and due dates accordingly.
 
 **Viewing Borrowed Books:**
-Users can view a list of borrowed books, including their titles and due dates
+Users can view a list of borrowed books, including their titles and due dates.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/unlocking-python-dictionaries-your.html
