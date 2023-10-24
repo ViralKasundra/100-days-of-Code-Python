@@ -1,144 +1,204 @@
-# Python Exceptions Application
+import json
 
-import traceback
-import sys
 
-# List to store the history of exceptions
-exception_history = []
+class Transaction:
+    def __init__(self, date, description, category, amount):
+        self.date = date
+        self.description = description
+        self.category = category
+        self.amount = amount
 
-# Dictionary to store information about common exceptions
-common_exceptions = {
-    'ZeroDivisionError': 'Occurs when dividing by zero.',
-    'ValueError': 'Occurs when an invalid value is provided to a function.',
-    'TypeError': 'Occurs when an operation is performed on an inappropriate data type.',
-    'FileNotFoundError': 'Occurs when attempting to access a file that does not exist.',
-    # Add more common exceptions and descriptions as needed
-}
 
-# Function to handle common exceptions
-def handle_common_exceptions():
+class PersonalFinanceTracker:
+    def __init__(self):
+        self.transactions = []
+        self.budgets = {}
+
+    def add_transaction(self, transaction):
+        if not isinstance(transaction.amount, (int, float)):
+            raise ValueError("Amount must be a number.")
+        self.transactions.append(transaction)
+
+    def view_transactions(self):
+        for transaction in self.transactions:
+            print(
+                f"Date: {transaction.date}, Description: {transaction.description}, Category: {transaction.category}, Amount: {transaction.amount}")
+
+    def calculate_total_balance(self):
+        income = sum(transaction.amount for transaction in self.transactions if transaction.amount > 0)
+        expenses = sum(transaction.amount for transaction in self.transactions if transaction.amount < 0)
+        return income - expenses
+
+    def calculate_category_spending(self, category):
+        category_expenses = sum(
+            transaction.amount for transaction in self.transactions if transaction.category == category)
+        return category_expenses
+
+    def set_budget(self, category, budget_limit):
+        self.budgets[category] = budget_limit
+
+    def view_budgets(self):
+        for category, budget_limit in self.budgets.items():
+            print(f"Category: {category}, Budget Limit: {budget_limit}")
+
+    def check_budget(self, category):
+        if category in self.budgets:
+            category_expenses = sum(
+                transaction.amount for transaction in self.transactions if transaction.category == category)
+            budget_limit = self.budgets[category]
+            return category_expenses, budget_limit
+        else:
+            return None, None
+
+    def save_data(self, filename):
+        data = {
+            "transactions": [
+                {
+                    "date": transaction.date,
+                    "description": transaction.description,
+                    "category": transaction.category,
+                    "amount": transaction.amount,
+                }
+                for transaction in self.transactions
+            ],
+            "budgets": self.budgets
+        }
+        with open(filename, "w") as file:
+            json.dump(data, file)
+        print(f"Data saved to '{filename}'.")
+
+    def load_data(self, filename):
+        try:
+            with open(filename, "r") as file:
+                data = json.load(file)
+                self.transactions = [
+                    Transaction(
+                        item["date"],
+                        item["description"],
+                        item["category"],
+                        item["amount"],
+                    )
+                    for item in data.get("transactions", [])
+                ]
+                self.budgets = data.get("budgets", {})
+                print(f"Data loaded from '{filename}'.")
+        except FileNotFoundError:
+            print("File not found. Unable to load data.")
+        except json.JSONDecodeError:
+            print("Invalid JSON format in the file. Unable to load data.")
+
+
+def initialize_budgets(finance_tracker):
+    # Initialize budgets for different categories
+    finance_tracker.set_budget("Groceries", 300.0)
+    finance_tracker.set_budget("Rent", 1200.0)
+    finance_tracker.set_budget("Transportation", 150.0)
+    finance_tracker.set_budget("Entertainment", 200.0)
+
+
+def initialize_data(finance_tracker):
+    # Initialize some transactions
+    transaction1 = Transaction("2023-01-05", "Groceries", "Food", -50.0)
+    transaction2 = Transaction("2023-01-10", "Paycheck", "Income", 1500.0)
+    transaction3 = Transaction("2023-01-15", "Rent", "Housing", -800.0)
+
+    finance_tracker.add_transaction(transaction1)
+    finance_tracker.add_transaction(transaction2)
+    finance_tracker.add_transaction(transaction3)
+
+    # Initialize some budgets
+    finance_tracker.set_budget("Food", 200.0)
+    finance_tracker.set_budget("Housing", 1000.0)
+
+
+def main():
+    finance_tracker = PersonalFinanceTracker()
+
+    # Initialize data
+    initialize_data(finance_tracker)
+    # Initialize budgets
+    initialize_budgets(finance_tracker)
+
     while True:
-        print("Common Exceptions:")
-        for index, exception in enumerate(common_exceptions, start=1):
-            print(f"{index}. {exception}")
+        print("\nPersonal Finance Tracker")
+        print("1. Add Transaction")
+        print("2. View Transactions")
+        print("3. Calculate Total Balance")
+        print("4. Calculate Category Spending")
+        print("5. Set Budget")
+        print("6. View Budgets")
+        print("7. Check Budget")
+        print("8. Save Data")
+        print("9. Load Data")
+        print("10. Exit")
 
-        choice = input("Select an exception (1/2/3/4/... or 'q' to quit): ")
-        if choice == 'q':
+        choice = input("Enter your choice (1/2/3/4/5/6/7/8/9/10): ")
+
+        if choice == '1':
+            date = input("Enter the date (YYYY-MM-DD): ")
+            description = input("Enter a description: ")
+            category = input("Enter a category: ")
+            try:
+                amount = float(input("Enter the amount: "))
+                transaction = Transaction(date, description, category, amount)
+                finance_tracker.add_transaction(transaction)
+                print("Transaction added successfully!")
+            except ValueError:
+                print("Invalid amount. Please enter a valid number.")
+
+        if choice == '2':
+            if finance_tracker.transactions:
+                finance_tracker.view_transactions()
+            else:
+                print("No transactions to display.")
+
+        elif choice == '3':
+            total_balance = finance_tracker.calculate_total_balance()
+            print(f"Total Balance: {total_balance}")
+
+        elif choice == '4':
+            category = input("Enter the category to calculate spending: ")
+            category_spending = finance_tracker.calculate_category_spending(category)
+
+            if category_spending is not None:
+                print(f"Category '{category}' does not exist or has no spending.")
+            else:
+                print(f"Spending in '{category}': {category_spending}")
+
+        elif choice == '5':
+            category = input("Enter the category to set a budget: ")
+            budget_limit = float(input("Enter the budget limit: "))
+            finance_tracker.set_budget(category, budget_limit)
+            print(f"Budget set for '{category}' with a limit of {budget_limit}")
+
+        elif choice == '6':
+            finance_tracker.view_budgets()
+
+        elif choice == '7':
+            category = input("Enter the category to check the budget: ")
+            category_expenses, budget_limit = finance_tracker.check_budget(category)
+            if category_expenses is not None:
+                if category_expenses > budget_limit:
+                    print(f"Category '{category}' has exceeded its budget of {budget_limit}.")
+                else:
+                    print(f"Category '{category}' is within its budget of {budget_limit}.")
+            else:
+                print(f"No budget set for category '{category}'.")
+
+        elif choice == '8':
+            filename = input("Enter the filename for data: ")
+            finance_tracker.save_data(filename)
+
+        elif choice == '9':
+            filename = input("Enter the filename to load data from: ")
+            finance_tracker.load_data(filename)
+
+        elif choice == '10':
+            print("Exiting the Personal Finance Tracker. Goodbye!")
             break
-        try:
-            index = int(choice) - 1
-            selected_exception = list(common_exceptions.keys())[index]
-            raise_exception(selected_exception)
-        except (ValueError, IndexError):
-            print("Invalid choice. Please select a valid option or 'q' to quit.")
 
-# Function to raise a specific exception
-def raise_exception(exception_name):
-    try:
-        if exception_name == 'ZeroDivisionError':
-            result = 1 / 0
-        elif exception_name == 'ValueError':
-            value = int("invalid")
-        elif exception_name == 'TypeError':
-            value = "string" + 1
-        elif exception_name == 'FileNotFoundError':
-            with open("non_existent_file.txt", "r") as file:
-                file.read()
-        # Add handling for additional common exceptions here
-    except Exception as e:
-        record_exception(e)
-        print(f"Exception: {exception_name}")
-        print(f"Description: {common_exceptions[exception_name]}")
-        print(f"Message: {str(e)}")
+        else:
+            print("Invalid choice. Please select a valid option (1/2/3/4/5/6/7/8/9/10).")
 
-# Function to practice advanced exception handling
-def practice_advanced_exception_handling():
-    try:
-        num = int(input("Enter a number: "))
-        result = 10 / num
-        print(f"Result: {result}")
-    except ZeroDivisionError as e:
-        record_exception(e)
-        print("Error: Division by zero is not allowed.")
-    except ValueError as e:
-        record_exception(e)
-        print("Error: Invalid input. Please enter a valid number.")
-    except Exception as e:
-        record_exception(e)
-        print(f"An unexpected error occurred: {str(e)}")
-
-# Function to define and raise a custom exception
-class CustomException(Exception):
-    pass
-
-def define_and_raise_custom_exception():
-    try:
-        raise CustomException("This is a custom exception.")
-    except CustomException as e:
-        record_exception(e)
-        print(f"Custom Exception Raised: {str(e)}")
-
-# Function to view the exception history
-def view_exception_history():
-    if not exception_history:
-        print("No exceptions in the history.")
-    else:
-        print("Exception History:")
-        for index, exception in enumerate(exception_history, start=1):
-            print(f"{index}. {exception}")
-
-# Function to save the exception history to a file
-def save_exception_history_to_file():
-    if not exception_history:
-        print("No exceptions to save. Exception history is empty.")
-    else:
-        filename = input("Enter the filename to save the exception history: ")
-        try:
-            with open(filename, 'w') as file:
-                file.write("\n".join(exception_history))
-            print(f"Exception history saved to {filename}.")
-        except Exception as e:
-            print(f"Error while saving the exception history: {str(e)}")
-
-# Function to catch unhandled exceptions globally
-def global_exception_handler(exctype, value, tb):
-    formatted_traceback = traceback.format_exception(exctype, value, tb)
-    exception_message = "".join(formatted_traceback)
-    record_exception(exception_message)
-    print("An unhandled exception occurred:")
-    print(exception_message)
-
-# Function to record exceptions in the history
-def record_exception(exception):
-    exception_history.append(str(exception))
-
-# Set the global exception handler
-sys.excepthook = global_exception_handler
-
-# Main application loop
-while True:
-    print("\nPython Exceptions Application")
-    print("1. Handle Common Exceptions")
-    print("2. Practice Advanced Exception Handling")
-    print("3. Define and Raise Custom Exceptions")
-    print("4. View Exception History")
-    print("5. Save Exception History to File")
-    print("6. Exit")
-
-    choice = input("Enter your choice (1/2/3/4/5/6): ")
-
-    if choice == '1':
-        handle_common_exceptions()
-    elif choice == '2':
-        practice_advanced_exception_handling()
-    elif choice == '3':
-        define_and_raise_custom_exception()
-    elif choice == '4':
-        view_exception_history()
-    elif choice == '5':
-        save_exception_history_to_file()
-    elif choice == '6':
-        print("Exiting the Python Exceptions Application. Goodbye!")
-        break
-    else:
-        print("Invalid choice. Please select a valid option (1/2/3/4/5/6).")
+if __name__ == "__main__":
+    main()
