@@ -35,3 +35,7 @@ The application showcases how to convert sets to other data types, such as lists
 Set Equality and Subsets:
 
 Users can check for set equality and subset relationships, demonstrating the == operator and issubset method.
+
+**Check blow link  for  more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/mastering-python-sets-from-basics-to.html
