@@ -1,51 +1,61 @@
-Overview
-The Hangman Game is a Python-based word guessing game in which players attempt to guess a hidden word by suggesting letters one at a time. The game provides ASCII art representation of a hangman figure as players make incorrect guesses. The game continues until the player either guesses the word or runs out of attempts.
+****Objective:****
 
-Features
-1. Select Random Word
-The game randomly selects a word from a predefined list.
-Input: None.
-Output: A word is chosen for the game.
+Develop a text-based Blackjack game that allows a player to play multiple rounds against a computer-controlled dealer. The game should follow standard Blackjack rules, with the player attempting to get a hand value as close to 21 as possible without going over.
 
-2. Display Hangman Art
-The game displays ASCII art representing the hangman figure.
-Input: The number of incorrect attempts.
-Output: The appropriate hangman figure is shown.
+**Features:**
 
-3. Guess a Letter
-The player can guess a letter in an attempt to guess the hidden word.
-Input: A single letter.
-Output: The game provides feedback on the correctness of the guess and updates the word display.
+**User Initialization:**
 
-4. Word Display
-The game displays the word with underscores for unrevealed letters and reveals correct guesses.
-Input: None.
-Output: The current state of the word, including guessed letters.
+The game starts by requesting the user's name.
 
-5. Guessed Letters
-The game maintains a list of guessed letters.
-Input: None.
-Output: The list of guessed letters is displayed.
+**Welcome Message:**
 
-6. Win Condition
-The game checks if the player has guessed the word correctly.
-Input: None.
-Output: A message is displayed if the player wins the game.
+Display a stylish welcome message using the PyFiglet library.
 
-7. Lose Condition
-The game checks if the player has exhausted their allowed attempts.
-Input: None.
-Output: A message is displayed if the player loses the game.
+**Game Loop:**
 
-8. Validate Input
-The game validates user input to ensure it is a single letter.
-Input: User input.
-Output: Feedback is provided for invalid input.
+The game consists of a loop that allows the user to play multiple rounds until they choose to exit.
 
-Assumptions and Constraints
-The game uses a predefined list of words.
-The hangman figure consists of seven stages.
-Players have a limited number of attempts (6 in this case).
-The game accepts single-letter guesses from the player.
-Only one letter can be guessed at a time.
-The game does not consider letter case (case-insensitive).
+**Deal Cards:**
+
+At the beginning of each round, two cards are dealt to the player and the dealer.
+
+**Hand Value Calculation:**
+
+Calculate the total value of a hand, considering Ace cards that can be 1 or 11.
+
+**Player's Turn:**
+
+The player can choose to "hit" (draw another card) or "stand" (keep their current hand).
+If the player's hand value reaches 21, they win the round (Blackjack).
+If the player's hand value exceeds 21, they lose the round (Bust).
+
+**Dealer's Turn:**
+
+The dealer follows a rule to "hit" until their hand value is 17 or higher.
+Outcome Determination:
+
+**Determine the outcome of the round:**
+
+If the dealer busts (exceeds 21), the player wins.
+If the player has a higher hand value than the dealer and is not over 21, the player wins.
+If the dealer has a higher hand value than the player, the dealer wins.
+In case of a tie, the dealer wins.
+
+**Play Again:**
+
+After each round, ask the player if they want to play another round.
+The game continues until the player chooses to exit.
+Dependencies:
+
+**Run the Python script.**
+
+1.Enter your name when prompted.
+
+2.Play rounds of Blackjack by choosing "hit" or "stand" until you decide to exit.
+
+**Assumptions:**
+
+1.The player follows standard Blackjack rules.
+
+2.The game simulates a single player against a computer-controlled dealer.
