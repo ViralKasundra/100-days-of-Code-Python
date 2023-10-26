@@ -60,3 +60,6 @@ Dependencies:
 
 2.The game simulates a single player against a computer-controlled dealer.
 
+**Check blow link for more details about Python Concepts**
+https://www.cloudtechtwitter.com/2023/10/understanding-control-flow-in-python.html
+
