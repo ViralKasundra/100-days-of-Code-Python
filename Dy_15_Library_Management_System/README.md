@@ -1,4 +1,4 @@
-**Library Management System Project Requirements**
+**Library Management System Project**
 
 The goal of this project is to create a basic library management system that allows users to perform the following operations:
 Check out a book from the library.
