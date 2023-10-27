@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Alice",
+        "patron_id": 1,
+        "books_checked_out": []
+    },
+    {
+        "name": "Bob",
+        "patron_id": 2,
+        "books_checked_out": []
+    }
+]
