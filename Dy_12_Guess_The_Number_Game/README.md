@@ -35,3 +35,7 @@ The game continues until the player chooses to exit.
 
 The player is allowed a fixed number of attempts (e.g., 10 attempts) per round.
 The range for the random number selection is defined (e.g., 1 to 100).
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/understanding-control-flow-in-python.html
