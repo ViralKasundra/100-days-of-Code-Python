@@ -39,3 +39,8 @@ The script handles errors gracefully and informs the user when resources are ins
 **Exit:**
 
 Users can choose to exit the coffee machine simulation.
+
+****Check blow link for more details about Python Concepts****
+
+https://www.cloudtechtwitter.com/2023/10/demystifying-python-exceptions-from.html
+
