@@ -74,3 +74,7 @@ Integration with a database for data storage.
 A web-based or desktop graphical user interface (GUI).
 
 These enhancements can make the system more feature-rich and user-friendly, but they are not mandatory for the core functionality. The complexity and scope of the project can be adjusted based on your objectives and requirements.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/a-deep-dive-into-python-oop-from-basics.html
