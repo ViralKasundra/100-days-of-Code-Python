@@ -7,6 +7,7 @@ Register a new patron.
 Save and load data to/from JSON files for books and patrons.
 
 **Functional Requirements**
+
 **1.Library Operations:**
 
 The system should provide a menu-driven interface for users to select one of the following operations:
