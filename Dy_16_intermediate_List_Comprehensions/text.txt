@@ -1,0 +1,5 @@
+This is an example text file.
+It contains multiple lines and words.
+The purpose is to demonstrate the functionality of the text analysis tool.
+
+Please feel free to modify or use your own text files for analysis.
