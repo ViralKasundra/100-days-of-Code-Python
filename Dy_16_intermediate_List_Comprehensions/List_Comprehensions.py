@@ -37,7 +37,7 @@ def analyze_directory(directory, num_common_words):
     return top_words
 
 def main():
-    directory = "your_directory_path_here"
+    directory = "text.txt"
     num_common_words = 10  # Change this value to the desired number of common words
 
     top_words = analyze_directory(directory, num_common_words)
