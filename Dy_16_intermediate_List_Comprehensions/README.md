@@ -15,3 +15,7 @@ Common words like "the," "and," "is," etc., should be excluded from the analysis
 The program should then count the frequency of each word.
 
 Finally, it should display the top N most common words and their frequencies.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/mastering-list-comprehensions-in-python.html
