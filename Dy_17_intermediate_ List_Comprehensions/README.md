@@ -18,3 +18,7 @@ Completed tasks should be displayed separately from uncompleted tasks.
 The user should be able to clear all completed tasks.
 
 Users can quit the application.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/10/mastering-list-comprehensions-in-python.html
