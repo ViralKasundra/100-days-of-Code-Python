@@ -1,0 +1,14 @@
+{
+    "viv": {
+        "password": "abcd123",
+        "role": "user"
+    },
+    "vvv": {
+        "password": "vvv",
+        "role": "user"
+    },
+    "vv": {
+        "password": "vv",
+        "role": "user"
+    }
+}
