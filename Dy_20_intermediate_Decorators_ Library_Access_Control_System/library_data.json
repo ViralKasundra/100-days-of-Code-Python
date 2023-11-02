@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Python Basics",
+        "author": "John Doe",
+        "copies": 5
+    },
+    {
+        "title": "Advanced Python",
+        "author": "Jane Smith",
+        "copies": 2
+    }
+]
