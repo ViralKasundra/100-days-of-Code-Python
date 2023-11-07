@@ -3,6 +3,7 @@
 The goal of this project is to develop an interactive Python program that allows users to input, analyze, and manage expenses. The program will apply a tax rate to expenses, calculate various statistics, and provide options for users to sort, modify, or remove specific expenses.
 
 **Objectives**
+
 Create an interactive Python program for expense analysis.
 
 Apply a user-defined tax rate to expenses.
@@ -38,7 +39,7 @@ Allow users to modify specific expenses by index.
 
 Allow users to remove specific expenses by index.
 
-**User Requirements**
+******User Requirements******
 
 **User Inputs**
 
