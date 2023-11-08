@@ -59,3 +59,7 @@ The application is developed using Python and the Tkinter library, and it runs o
 ****Future Enhancements****
 
 For future releases, the SalarySense application could be enhanced with additional features, such as the ability to edit employee records, save and load data from external files, and perform more advanced data processing tasks.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/Power-of-Python-Lambda-Functions.html
