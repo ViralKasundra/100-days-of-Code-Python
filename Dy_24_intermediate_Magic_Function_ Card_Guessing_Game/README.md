@@ -62,3 +62,7 @@ The game can be extended to include a scoring system.
 Multiplayer functionality can be added for competitive play.
 
 High scores and statistics can be tracked and displayed.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/Python-Magic-Methods-Or-Dunder-Methods%20.html
