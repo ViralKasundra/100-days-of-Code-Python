@@ -34,3 +34,6 @@ Provide clear instructions for users to input directory paths and filter criteri
 Error Handling:
 Implement error handling to gracefully manage issues such as invalid directory paths or file operations.
 
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/PythonIteratorGenerators.html
