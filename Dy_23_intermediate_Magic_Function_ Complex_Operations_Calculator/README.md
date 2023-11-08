@@ -65,3 +65,7 @@ Display the result in a user-friendly format.
 The application should be developed using Python 3.
 
 The Tkinter library should be used for the GUI.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/Python-Magic-Methods-Or-Dunder-Methods%20.html
