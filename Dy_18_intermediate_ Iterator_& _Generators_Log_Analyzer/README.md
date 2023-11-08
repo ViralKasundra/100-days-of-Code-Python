@@ -20,6 +20,9 @@ Build a log file analyzer that can process large log files and generate meaningf
 
 **Interactive Interface:** Develop a command-line or GUI interface to allow users to input log files and choose the type of analysis and summaries they want.
 
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/PythonIteratorGenerators.html
 
 **Optimization for Large Files:** Ensure the application can efficiently process very large log files without consuming excessive memory.
 
