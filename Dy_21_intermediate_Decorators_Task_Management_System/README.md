@@ -79,3 +79,7 @@ Data files will be protected to prevent unauthorized access.
 **10. User Interface**
 
 The application will provide a text-based, command-line interface for user interaction.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/python-decorators-unwrapped-elevate.html
