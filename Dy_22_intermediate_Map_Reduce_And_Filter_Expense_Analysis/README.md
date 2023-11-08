@@ -65,3 +65,8 @@ The program should display sorted expenses in ascending order.
 The program should display the average expense.
 
 The program should provide feedback when expenses are modified or removed.
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/Python-Map-Reduce-and-Filter.html
+
