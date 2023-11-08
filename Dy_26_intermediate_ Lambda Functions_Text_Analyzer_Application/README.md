@@ -84,3 +84,8 @@ Improved performance for very large texts.
 The ability to process additional types of text analysis.
 
 Saving and loading analysis results.
+
+
+**Check blow link for more details about Python Concepts**
+
+https://www.cloudtechtwitter.com/2023/11/Power-of-Python-Lambda-Functions.html
