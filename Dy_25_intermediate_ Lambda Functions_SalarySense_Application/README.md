@@ -47,9 +47,15 @@ The SalarySense application presents a simple and user-friendly graphical user i
 **Calculate Total Salary:** A button to calculate and display the total salary.
 
 **Error Messages:** An area to display error messages, especially for invalid input.
-Constraints
+
+****Constraints****
+
 The SalarySense application is designed for a small set of employees, and the list size may be limited by system memory.
+
 All input fields, including bonus and salary threshold, must accept only numeric values.
+
 The application is developed using Python and the Tkinter library, and it runs on compatible platforms.
-Future Enhancements
+
+****Future Enhancements****
+
 For future releases, the SalarySense application could be enhanced with additional features, such as the ability to edit employee records, save and load data from external files, and perform more advanced data processing tasks.
